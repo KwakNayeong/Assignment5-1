@@ -1,11 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const rootElement = document.getElementById('root');    
-ReactDOM.render(<App />, rootElement);
-document.getElementById('customLink').addEventListener('click', (e) => {
-    e.preventDefault(); // 기본 동작 방지
-    console.log('React 앱 내부에서 링크를 처리합니다!');
-});
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import ShowList from "./components/App";
+const myComponent = <ShowList />;
+const root =
+    ReactDOM.createRoot(document.getElementById("root"));
+root.render(myComponent);
